@@ -1,41 +1,68 @@
-📚 API de Doação de Livros
-Esta é uma API simples feita com Flask e SQLite que permite cadastrar e listar livros doados.
+# 📚 API de Doação de Livros
 
-▶️ Como rodar o projeto
-Clone o repositório:
+Esta é uma API simples feita com **Flask** e **SQLite** que permite cadastrar e listar livros doados.
+
+---
+
+## ▶️ Como rodar o projeto
+
+1. Clone o repositório:
+```bash
 git clone <URL_DO_REPOSITORIO>
 cd nome-do-projeto
-Crie um ambiente virtual (opcional, mas recomendado):
+```
+
+2. Crie um ambiente virtual (opcional, mas recomendado):
+```bash
 python -m venv venv
 source venv/bin/activate  # No Windows: venv\Scripts\activate
-Instale as dependências:
-pip install -r requirements.txt
-Inicie o servidor:
-python app.py
-A API estará disponível em http://localhost:5000
+```
 
-🔗 Endpoints
-➕ POST /doar
+3. Instale as dependências:
+```bash
+pip install -r requirements.txt
+```
+
+4. Inicie o servidor:
+```bash
+python app.py
+```
+
+> A API estará disponível em `http://localhost:5000`
+
+---
+
+## 🔗 Endpoints
+
+### ➕ POST `/doar`
+
 Cadastra um novo livro.
 
-Requisição (JSON):
-
+**Requisição (JSON):**
+```json
 {
   "titulo": "Dom Casmurro",
   "categoria": "Romance",
   "autor": "Machado de Assis",
   "image_url": "https://link-da-imagem.com"
 }
-Resposta (201):
+```
 
+**Resposta (201):**
+```json
 {
   "mensagem": "Livro cadastrado com sucesso!"
 }
-📚 GET /livros
+```
+
+---
+
+### 📚 GET `/livros`
+
 Retorna todos os livros cadastrados.
 
-Resposta (200):
-
+**Resposta (200):**
+```json
 [
   {
     "id": 1,
@@ -45,16 +72,25 @@ Resposta (200):
     "image_url": "https://link-da-imagem.com"
   }
 ]
-❌ DELETE /livros/id
+```
+
+---
+### ❌ DELETE `/livros/id`
+
 Deletar um Livro.
 
-Resposta (200):
-
+**Resposta (200):**
+```json
 {
     "menssagem": "Livro excluido com sucesso!"
 }
-🧰 Tecnologias utilizadas
-Python 3
-Flask
-SQLite
-Flask-CORS
+```
+
+## 🧰 Tecnologias utilizadas
+
+- Python 3
+- Flask
+- SQLite
+- Flask-CORS
+
+

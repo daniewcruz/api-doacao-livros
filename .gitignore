@@ -1,0 +1,14 @@
+# Ignorar ambientes virtuais e arquivos Python compilados
+venv/
+*.pyc
+__pycache__/
+
+# Ignorar dependências do Node (caso tenha)
+node_modules/
+dist/
+
+# Ignorar banco de dados se for temporário
+database.db
+
+# Ignorar repositórios dentro de repositórios
+doar-livros-vnw/
